@@ -1,0 +1,26 @@
+but firstly if you open a project on next time and you dont see this line in terminal "DataBase Connected Successful" so open your mongodb and connect IP address 
+now I start a project again
+opent 
+no wait this is da old one
+show me on this one pls
+if you are in second project folder so you don't need a this command (1)"cd project"
+start with this command (2)"npm start"
+if you this error so write first command
+sorry?
+due to some internet problem that why we faced some issues
+if your db is not connected so you faced this error in terminal
+u want me to open da mongodb?
+yes
+
+brother tis not updated file
+yes bcus u didnt save it da first time
+Alright
+but use Autosave in vs code 
+thats it thank u v much
+Any problem ?
+no thats it
+All good!
+ya
+Alright I will end this session?
+yes pls
+

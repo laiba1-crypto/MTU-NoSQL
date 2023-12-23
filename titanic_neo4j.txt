@@ -1,0 +1,56 @@
+######################################### Student ID:R00201303##############################################
+1) Importing the Data:
+
+LOAD CSV WITH HEADERS FROM 'file:///titanic.csv' AS row
+CREATE (passenger:Passenger {
+  survival: toInteger(row.survival),
+  pclass: toInteger(row.pclass),
+  sex: row.sex,
+  age: toFloat(row.age),
+  sibsp: toInteger(row.sibsp),
+  parch: toInteger(row.parch),
+  ticket: row.ticket,
+  fare: toFloat(row.fare),
+  cabin: row.cabin,
+  embarked: row.embarked
+})
+
+2) Database Design:
+CREATE INDEX ON :Passenger(name)
+
+
+3) Query Execution:
+1) List alphabetically the names of all female passengers that survived:
+MATCH (p:Passenger)
+WHERE p.sex = 'female' AND p.survival = 1
+RETURN p.name
+ORDER BY p.name ASC
+
+
+
+2) Output by class, the names of children who survived:
+MATCH (p:Passenger)
+WHERE p.age < 18 AND p.survival = 1
+RETURN p.pclass, p.name
+ORDER BY p.pclass ASC
+
+
+3) Output by class, the names of children who did not survive:
+MATCH (p:Passenger)
+WHERE p.age < 18 AND p.survival = 0
+RETURN p.pclass, p.name
+ORDER BY p.pclass ASC
+
+4)Count of children in each class that survived:
+MATCH (p:Passenger)
+WHERE p.age < 18 AND p.survival = 1
+RETURN p.pclass, count(p) AS count
+ORDER BY p.pclass ASC
+
+
+5)Count of children in each class who did not survive:
+MATCH (p:Passenger)
+WHERE p.age < 18 AND p.survival = 0
+RETURN p.pclass, count(p) AS count
+ORDER BY p.pclass ASC
+

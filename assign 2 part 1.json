@@ -1,0 +1,19 @@
+[
+    {
+      "age": 39,
+      "gender": "f",
+      "department": "computer.Sc",
+      "EmployeeID": 89076,
+      "departmentID": 90888,
+      "region": "Cork",
+      "no_of_traingings": 6,
+      "awards_won": 8,
+      "avg_trainging_score": 9.66,
+      "education": "databases",
+      "recruitment_channel": "linkedIn",
+      "previous_year_rating": 4.3,
+      "length_of_service": 9,
+      "KPIs_met": 1,
+      "is_promoted": 2
+    }
+  ]
